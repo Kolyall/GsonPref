@@ -1,6 +1,8 @@
 # GsonPref
-public class MainActivity extends AppCompatActivity {
 
+In Activity:
+
+    public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         userSettingsPref.setObject(newUserSettings);//save to pref, change cachedObject in RAM
 
     }
+
+Create Singleton to get instance of `ObjectPreference<UserSettings>` :
 
     public static class UserSettingsSingleton{
 
