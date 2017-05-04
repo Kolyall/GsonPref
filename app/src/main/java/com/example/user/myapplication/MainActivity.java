@@ -2,6 +2,7 @@ package com.example.user.myapplication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.icu.util.Calendar;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         UserSettings newUserSettings = new UserSettings();
         newUserSettings.setName("AnyName");
+        newUserSettings.setCreatedAt(Calendar.getInstance().getTime());
         userSettingsPref.setObject(newUserSettings);//save to pref, change cachedObject in RAM
 
     }

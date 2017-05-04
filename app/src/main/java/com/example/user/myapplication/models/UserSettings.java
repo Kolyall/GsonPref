@@ -1,5 +1,7 @@
 package com.example.user.myapplication.models;
 
+import java.util.Date;
+
 /**
  * Created by User on 04.05.2017.
  */
@@ -8,6 +10,7 @@ public class UserSettings {
     String name;
     String password;
     boolean run;
+    Date createdAt;
 
     public String getName() {
         return name;
@@ -31,5 +34,13 @@ public class UserSettings {
 
     public void setRun(boolean run) {
         this.run = run;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
     }
 }
