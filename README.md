@@ -6,6 +6,7 @@ public class UserSettings {
     String name;
     String password;
     boolean run;
+    Date createdAt;
  }
  ```
  Create Singleton to get instance of `ObjectPreference<UserSettings>` :
@@ -48,6 +49,7 @@ In Activity:
 
         UserSettings newUserSettings = new UserSettings();
         newUserSettings.setName("AnyName");
+        newUserSettings.setCreatedAt(Calendar.getInstance().getTime());
         userSettingsPref.setObject(newUserSettings);//save to pref, change cachedObject in RAM
 
     }
